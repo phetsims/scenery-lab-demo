@@ -60,34 +60,34 @@
 <body>
   <script>
     ( () => {
-      const textFont = new scenery.Font( {
+      const textFont = new phet.scenery.Font( {
         size: 12
       } );
 
-      const checkbox = new sun.Checkbox( new axon.BooleanProperty( true ), new scenery.Text( 'Checkbox', { font: textFont } ), {
+      const checkbox = new phet.sun.Checkbox( new phet.axon.BooleanProperty( true ), new phet.scenery.Text( 'Checkbox', { font: textFont } ), {
         labelContent: 'Checkbox',
         descriptionContent: 'This is a very impressive looking checkbox!'
       } );
 
-      const button = new sun.TextPushButton( 'Text Push Button', {
+      const button = new phet.sun.TextPushButton( 'Text Push Button', {
         font: textFont,
         listener: () => {
           button.alertDescriptionUtterance( 'This is an alert!' );
         }
       } );
 
-      const rootNode = new scenery.Node( {
+      const rootNode = new phet.scenery.Node( {
         children: [
-          new scenery.VBox( {
+          new phet.scenery.VBox( {
             align: 'left',
             spacing: 10,
             x: 10,
             y: 10,
             children: [
-              new scenery.Text( 'Scenery Lab Demo', {
+              new phet.scenery.Text( 'Scenery Lab Demo', {
                 tagName: 'h1',
                 innerContent: 'Scenery Lab Demo',
-                font: new scenery.Font( {
+                font: new phet.scenery.Font( {
                   size: 24,
                   weight: 'bold'
                 } ),
@@ -103,7 +103,7 @@
         // Happens every frame, can be used to animate things
       };
 
-      const display = new scenery.Display( rootNode, {
+      const display = new phet.scenery.Display( rootNode, {
         // A specific size. Could set `display.width = window.innerWidth` etc. in the
         width: 640,
         height: 480
